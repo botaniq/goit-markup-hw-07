@@ -1,0 +1,84 @@
+@import "../utils/variables.scss";
+.header {
+	.container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.flex-container {
+		align-items: center;
+	}
+}
+
+.navigation {
+	display: flex;
+}
+.navigation-item:not(:last-child) {
+	margin-right: 50px;
+}
+.navigation-item-link {
+	display: block;
+	position: relative;
+	padding-bottom: 32px;
+	padding-top: 32px;
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+
+	color: $headers-text-color;
+
+	transition-property: color;
+	transition-duration: $animation-duration;
+	transition-timing-function: $animation-timing-function;
+}
+.navigation-adress {
+	display: flex;
+	margin-left: auto;
+}
+.navigation-adress-item:not(:last-child) {
+	margin-right: 30px;
+}
+.navigation-adress-item-link {
+	display: flex;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	justify-content: center;
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+
+	color: $main-text-color;
+
+	transition-property: color;
+	transition-duration: $animation-duration;
+	transition-timing-function: $animation-timing-function;
+}
+.navigatiom-adress-item-icon {
+	fill: currentColor;
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+
+.navigation-item-link:hover,
+.navigation-item-link:focus,
+.navigation-adress-item-link:hover,
+.navigation-adress-item-link:focus {
+	color: $accent-color;
+}
+.navigation-item-link.current {
+	color: $accent-color;
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 4px;
+		border-radius: 2px;
+		width: 100%;
+		background-color: $accent-color;
+	}
+}

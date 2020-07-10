@@ -1,0 +1,21 @@
+@import "../utils/variables.scss";
+html {
+	box-sizing: border-box;
+}
+*:focus {
+	outline: none;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.71;
+	color: $main-text-color;
+	background-color: $primary-background-color;
+}
