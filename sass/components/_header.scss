@@ -1,4 +1,4 @@
-@import "../utils/variables.scss";
+@import "../utils/_variables.scss";
 .header {
 	.container {
 		padding-top: 0;
@@ -31,6 +31,11 @@
 	transition-property: color;
 	transition-duration: $animation-duration;
 	transition-timing-function: $animation-timing-function;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
 }
 .navigation-adress {
 	display: flex;
@@ -55,6 +60,11 @@
 	transition-property: color;
 	transition-duration: $animation-duration;
 	transition-timing-function: $animation-timing-function;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
 }
 .navigatiom-adress-item-icon {
 	fill: currentColor;
@@ -63,12 +73,6 @@
 	margin-right: 10px;
 }
 
-.navigation-item-link:hover,
-.navigation-item-link:focus,
-.navigation-adress-item-link:hover,
-.navigation-adress-item-link:focus {
-	color: $accent-color;
-}
 .navigation-item-link.current {
 	color: $accent-color;
 	&::after {

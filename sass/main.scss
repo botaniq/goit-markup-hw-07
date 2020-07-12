@@ -1,3 +1,14 @@
-@import "./components/default-style.scss";
-@import "./components/header.scss";
-@import "./components/logo.scss";
+@import "./utils/variables";
+@import "./components/default-style";
+@import "./components/utility-classes";
+@import "./components/logo";
+@import "./components/header";
+@import "./components/hero-section";
+@import "./components/features-section";
+@import "./components/wedoing-section";
+@import "./components/team-section";
+@import "./components/clients-section";
+@import "./components/footer";
+@import "./components/social-links";
+@import "./components/modal-window";
+@import "./components/portfolio";

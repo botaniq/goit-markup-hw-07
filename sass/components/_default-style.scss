@@ -1,15 +1,18 @@
-@import "../utils/variables.scss";
 html {
 	box-sizing: border-box;
 }
-*:focus {
-	outline: none;
-}
-*,
-*::before,
-*::after {
+
+* {
 	box-sizing: inherit;
+	&:focus {
+		outline: none;
+	}
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
 }
+
 body {
 	font-family: "Roboto", sans-serif;
 	font-style: normal;
