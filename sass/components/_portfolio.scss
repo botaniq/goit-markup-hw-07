@@ -1,16 +1,18 @@
-.header.portfolio {
-	border-bottom: 1px solid #ececec;
+.portfolio {
+	border-top: 1px solid #ececec;
 }
+
 .button-box {
-	display: flex;
+	@extend %flex-container;
 	justify-content: center;
 	margin-bottom: 50px;
 }
 .button-box-item {
 	position: relative;
-}
-.button-box-item:not(:last-child) {
-	margin-right: 8px;
+
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
 }
 .filter-button {
 	position: absolute;
@@ -52,10 +54,10 @@
 	transition-timing-function: $animation-timing-function;
 }
 // portfolio grid
-.portfolio {
-	&.flex-container {
-		flex-wrap: wrap;
-	}
+.portfolio-list {
+	@extend %list;
+	@extend %flex-container;
+	flex-wrap: wrap;
 }
 .portfolio-box {
 	width: calc((100% - 60px) / 3);
@@ -68,11 +70,9 @@
 	&:nth-child(-n + 3) {
 		margin-top: 0;
 	}
-	&:hover .portfolio-box-accent {
-		transform: translateY(0);
-	}
 }
-.portfolio-box .link {
+.portfolio-box-link {
+	@extend %link;
 	display: block;
 	border: 1px solid #eeeeee;
 
@@ -83,6 +83,7 @@
 	&:focus {
 		box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 	}
+	&:hover .portfolio-box-accent,
 	&:focus .portfolio-box-accent {
 		transform: translateY(0);
 	}

@@ -3,6 +3,11 @@
 		padding-bottom: 0;
 	}
 }
+.features-list {
+	@extend %list;
+	@extend %flex-container;
+	@extend %space-between;
+}
 .feature-title {
 	margin-top: 0;
 	margin-bottom: 10px;

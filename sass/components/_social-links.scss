@@ -1,5 +1,10 @@
+.social-box {
+	@extend %list;
+	@extend %flex-container;
+}
 .social-link {
-	display: flex;
+	@extend %link;
+	@extend %flex-container;
 	justify-content: center;
 	align-items: center;
 	width: 44px;
@@ -21,17 +26,8 @@
 .social:not(:last-child) {
 	margin-right: 10px;
 }
-.team {
-	& .social-link:hover,
-	& .social-link:focus {
-		background-color: $accent-color;
-		color: $light-text-color;
-	}
-}
-.join {
-	& .social-link:hover,
-	& .social-link:focus {
-		background-color: $accent-color;
-		color: $light-text-color;
-	}
+.social-link:hover,
+.social-link:focus {
+	background-color: $accent-color;
+	color: $light-text-color;
 }

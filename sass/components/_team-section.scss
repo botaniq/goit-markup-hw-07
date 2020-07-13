@@ -1,5 +1,14 @@
 .team {
 	background-color: $secondary-backgroun-color;
+	.social-box {
+		margin-left: 32px;
+		margin-bottom: 24px;
+	}
+}
+.team-card {
+	@extend %list;
+	@extend %flex-container;
+	@extend %space-between;
 }
 .team-card-box {
 	width: calc((100% - 30px * 3) / 4);
@@ -32,8 +41,4 @@
 	line-height: 1.19;
 	letter-spacing: 0.03em;
 	text-align: center;
-}
-.team-social-box {
-	margin-left: 32px;
-	margin-bottom: 24px;
 }

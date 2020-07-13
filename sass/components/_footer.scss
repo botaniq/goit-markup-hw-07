@@ -1,25 +1,22 @@
 .footer {
 	background-color: $footer-background-color;
 	.container {
+		@extend %flex-container;
+		align-items: baseline;
+
 		padding-top: 45px;
 		padding-bottom: 60px;
 	}
-	.flex-container {
-		align-items: baseline;
-	}
+
 	.logo {
-		display: block;
 		margin-top: 0;
 		margin-right: 0;
 		padding: 0;
 		margin-bottom: 8px;
 
-		font-size: 26px;
-		line-height: 1.19;
-
 		color: $light-text-color;
 	}
-	.hero-button {
+	.main-button {
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
@@ -41,52 +38,50 @@
 .footer-adress {
 	margin-right: 69px;
 }
-.footer-adress-item:not(:last-child) {
-	margin-bottom: 9px;
-}
 .footer-adress-item {
 	letter-spacing: 0.03em;
 	line-height: 1.71;
+
+	&:not(:last-child) {
+		margin-bottom: 9px;
+	}
 }
-.contacts {
+.footer-adress-list {
+	@extend %list;
 	font-style: normal;
 	letter-spacing: 0.03em;
 
 	color: $light-text-color;
 }
-.contacts .link {
+.footer-adress-link {
+	@extend %link;
 	color: rgba(255, 255, 255, 0.6);
 
 	transition-property: color;
 	transition-duration: $animation-duration;
 	transition-timing-function: $animation-timing-function;
+
 	&:hover,
 	&:focus {
 		color: $accent-color;
 	}
 }
-.subscribe {
+.footer-subscribe {
+	margin-left: auto;
+
 	.footer-title {
 		display: block;
 	}
 }
-.join {
-	margin-right: 94px;
-	.flex-container {
-		margin-bottom: 0;
-		align-items: center;
-	}
+.footer-join {
 	.social-link {
 		background: rgba(255, 255, 255, 0.1);
 	}
 	.social-icon {
 		fill: $primary-background-color;
 	}
-	&.social {
-		padding-bottom: 0;
-	}
 }
-.subscribe-input {
+.footer-subscribe-input {
 	margin-right: 12px;
 	width: 358px;
 	height: 50px;
