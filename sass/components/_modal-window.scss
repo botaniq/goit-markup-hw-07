@@ -37,8 +37,8 @@
 	transition-timing-function: $animation-timing-function;
 }
 .subcribe-form-button-close {
+	@extend %flex-container;
 	position: absolute;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	top: 8px;
@@ -117,7 +117,7 @@
 }
 .subscribe-form-checkbox,
 .subscribe-form-button {
-	display: flex;
+	@extend %flex-container;
 	justify-content: center;
 }
 .subscribe-form-button-disabled {

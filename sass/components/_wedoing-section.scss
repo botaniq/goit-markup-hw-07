@@ -1,3 +1,8 @@
+.wedoing-list {
+	@extend %list;
+	@extend %flex-container;
+	@extend %space-between;
+}
 .wedoing-box {
 	width: calc((100% - 30px * 2) / 3);
 	position: relative;

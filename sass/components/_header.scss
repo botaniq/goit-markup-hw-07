@@ -1,21 +1,22 @@
-@import "../utils/_variables.scss";
 .header {
 	.container {
+		@extend %flex-container;
+		align-items: center;
+
 		padding-top: 0;
 		padding-bottom: 0;
-	}
-	.flex-container {
-		align-items: center;
 	}
 }
 
 .navigation {
-	display: flex;
+	@extend %list;
+	@extend %flex-container;
 }
 .navigation-item:not(:last-child) {
 	margin-right: 50px;
 }
 .navigation-item-link {
+	@extend %link;
 	display: block;
 	position: relative;
 	padding-bottom: 32px;
@@ -38,14 +39,16 @@
 	}
 }
 .navigation-adress {
-	display: flex;
+	@extend %list;
+	@extend %flex-container;
 	margin-left: auto;
 }
 .navigation-adress-item:not(:last-child) {
 	margin-right: 30px;
 }
 .navigation-adress-item-link {
-	display: flex;
+	@extend %link;
+	@extend %flex-container;
 	padding-bottom: 20px;
 	padding-top: 20px;
 	justify-content: center;
@@ -75,6 +78,7 @@
 
 .navigation-item-link.current {
 	color: $accent-color;
+
 	&::after {
 		content: "";
 		position: absolute;

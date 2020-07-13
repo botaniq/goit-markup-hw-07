@@ -1,12 +1,3 @@
-.link {
-	text-decoration: none;
-}
-.list {
-	margin: 0;
-	padding: 0;
-
-	list-style-type: none;
-}
 .container {
 	width: 1200px;
 	padding-top: 94px;
@@ -15,9 +6,6 @@
 	padding-right: 15px;
 	margin-left: auto;
 	margin-right: auto;
-}
-.flex-container {
-	display: flex;
 }
 .visually-hidden {
 	position: absolute;
@@ -44,9 +32,33 @@
 
 	color: $headers-text-color;
 }
-.features .flex-container,
-.wedoing .flex-container,
-.team-card,
-.clients .flex-container {
-	justify-content: space-between;
+.main-button {
+	border-radius: 4px;
+	display: inline-block;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 9px;
+	padding-right: 9px;
+	min-width: 200px;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	text-align: center;
+	letter-spacing: 0.06em;
+
+	border: 1px solid transparent;
+	color: $light-text-color;
+	background-color: $button-color;
+
+	transition-property: background-color;
+	transition-duration: $animation-duration;
+	transition-timing-function: $animation-timing-function;
+
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: #188ce8;
+	}
 }
