@@ -1,0 +1,24 @@
+html {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+	&:focus {
+		outline: none;
+	}
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+}
+
+body {
+	font-family: $default-font;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.71;
+	color: $main-text-color;
+	background-color: $primary-background-color;
+}

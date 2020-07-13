@@ -1,0 +1,37 @@
+.social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+
+	color: $icon-color;
+
+	border-radius: 50%;
+
+	transition-property: background-color, color;
+	transition-duration: $animation-duration;
+	transition-timing-function: $animation-timing-function;
+}
+.social-icon {
+	fill: currentColor;
+	width: 20px;
+	height: 20px;
+}
+.social:not(:last-child) {
+	margin-right: 10px;
+}
+.team {
+	& .social-link:hover,
+	& .social-link:focus {
+		background-color: $accent-color;
+		color: $light-text-color;
+	}
+}
+.join {
+	& .social-link:hover,
+	& .social-link:focus {
+		background-color: $accent-color;
+		color: $light-text-color;
+	}
+}
