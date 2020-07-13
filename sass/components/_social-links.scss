@@ -17,6 +17,11 @@
 	transition-property: background-color, color;
 	transition-duration: $animation-duration;
 	transition-timing-function: $animation-timing-function;
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+		color: $light-text-color;
+	}
 }
 .social-icon {
 	fill: currentColor;
@@ -25,9 +30,4 @@
 }
 .social:not(:last-child) {
 	margin-right: 10px;
-}
-.social-link:hover,
-.social-link:focus {
-	background-color: $accent-color;
-	color: $light-text-color;
 }

@@ -540,6 +540,11 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-link:hover, .social-link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
 .social-icon {
   fill: currentColor;
   width: 20px;
@@ -548,12 +553,6 @@ body {
 
 .social:not(:last-child) {
   margin-right: 10px;
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: #2196f3;
-  color: #ffffff;
 }
 
 .backdrop {
