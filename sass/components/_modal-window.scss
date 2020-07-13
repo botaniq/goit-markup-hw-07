@@ -11,11 +11,11 @@
 
 	background-color: rgba(0, 0, 0, 0.2);
 }
-.backdrop.is-hidden .subscribe-form {
-	transform: scale(0.9) translate(-50%, -50%);
-}
 .subscribe-form-relative {
 	position: relative;
+}
+.backdrop.is-hidden .subscribe-form {
+	transform: scale(0.9) translate(-50%, -50%);
 }
 .subscribe-form {
 	position: absolute;
@@ -114,27 +114,79 @@
 		padding-left: 16px;
 		padding-right: 16px;
 	}
+	&:focus {
+		border-color: $accent-color;
+	}
+	&:focus ~ .subscribe-form-input-icon {
+		color: $accent-color;
+	}
+	&:focus ~ .subscribe-form-input-label {
+		transform: translate(-32px, -30px);
+		color: $accent-color;
+	}
+	&:focus ~ .subscribe-form-input-label.comment {
+		transform: translateY(-32px);
+	}
+	&:not(:placeholder-shown) ~ .subscribe-form-input-label {
+		transform: translate(-32px, -30px);
+	}
+	&:not(:placeholder-shown) ~ .subscribe-form-input-label.comment {
+		transform: translateY(-32px);
+	}
+}
+.subscribe-form-input-label {
+	position: absolute;
+	top: 12px;
+	left: 42px;
+
+	line-height: 1.14;
+	letter-spacing: 0.01em;
+
+	transform: translate(0, 0);
+	transition-property: transform, color;
+	transition-duration: $animation-duration;
+	transition-timing-function: $animation-timing-function;
+
+	&.comment {
+		left: 12px;
+	}
+}
+.subscribe-form-input-icon {
+	position: absolute;
+	top: 11px;
+	left: 16px;
+	width: 18px;
+	height: 18px;
+
+	color: #000;
+	fill: currentColor;
+
+	transition-property: color;
+	transition-duration: $animation-duration;
+	transition-timing-function: $animation-timing-function;
 }
 .subscribe-form-checkbox,
 .subscribe-form-button {
 	@extend %flex-container;
 	justify-content: center;
 }
-.subscribe-form-button-disabled {
-	background-color: $icon-color;
-	pointer-events: none;
-}
 .subscribe-form-checkbox-input {
 	margin-right: 7px;
 	padding: 0;
 	opacity: 0;
+
+	&:checked + .subscribe-form-checkbox-label:before {
+		opacity: 0;
+	}
+	&:checked + .subscribe-form-checkbox-label:after {
+		opacity: 1;
+	}
 }
 .subscribe-form-checkbox-label {
 	display: inline-block;
 	margin-bottom: 30px;
 	cursor: pointer;
-}
-.subscribe-form-checkbox-label {
+
 	&:before,
 	&:after {
 		content: "";
@@ -161,68 +213,10 @@
 		opacity: 0;
 	}
 }
-.subscribe-form-checkbox-input {
-	&:checked + .subscribe-form-checkbox-label:before {
-		opacity: 0;
-	}
-	&:checked + .subscribe-form-checkbox-label:after {
-		opacity: 1;
-	}
-}
-
 .subscribe-link-agree {
 	color: $accent-color;
 }
-.subscribe-form-input-label {
-	position: absolute;
-	top: 12px;
-	left: 42px;
-
-	line-height: 1.14;
-	letter-spacing: 0.01em;
-
-	transform: translate(0, 0);
-	transition-property: transform, color;
-	transition-duration: $animation-duration;
-	transition-timing-function: $animation-timing-function;
-
-	&.comment {
-		left: 12px;
-	}
-}
-
-.subscribe-form-input-icon {
-	position: absolute;
-	top: 11px;
-	left: 16px;
-	width: 18px;
-	height: 18px;
-
-	color: #000;
-	fill: currentColor;
-
-	transition-property: color;
-	transition-duration: $animation-duration;
-	transition-timing-function: $animation-timing-function;
-}
-.subscribe-form-input {
-	&:focus {
-		border-color: $accent-color;
-	}
-	&:focus ~ .subscribe-form-input-icon {
-		color: $accent-color;
-	}
-	&:focus ~ .subscribe-form-input-label {
-		transform: translate(-32px, -30px);
-		color: $accent-color;
-	}
-	&:focus ~ .subscribe-form-input-label.comment {
-		transform: translateY(-32px);
-	}
-	&:not(:placeholder-shown) ~ .subscribe-form-input-label {
-		transform: translate(-32px, -30px);
-	}
-	&:not(:placeholder-shown) ~ .subscribe-form-input-label.comment {
-		transform: translateY(-32px);
-	}
+.subscribe-form-button-disabled {
+	background-color: $icon-color;
+	pointer-events: none;
 }

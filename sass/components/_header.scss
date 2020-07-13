@@ -12,8 +12,10 @@
 	@extend %list;
 	@extend %flex-container;
 }
-.navigation-item:not(:last-child) {
-	margin-right: 50px;
+.navigation-item {
+	&:not(:last-child) {
+		margin-right: 50px;
+	}
 }
 .navigation-item-link {
 	@extend %link;
@@ -43,8 +45,10 @@
 	@extend %flex-container;
 	margin-left: auto;
 }
-.navigation-adress-item:not(:last-child) {
-	margin-right: 30px;
+.navigation-adress-item {
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
 }
 .navigation-adress-item-link {
 	@extend %link;

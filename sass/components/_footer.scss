@@ -7,7 +7,8 @@
 		padding-top: 45px;
 		padding-bottom: 60px;
 	}
-
+}
+.footer {
 	.logo {
 		margin-top: 0;
 		margin-right: 0;
@@ -16,12 +17,15 @@
 
 		color: $light-text-color;
 	}
+}
+.footer {
 	.main-button {
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
 	}
 }
+
 .footer-title {
 	margin-top: 0;
 	margin-bottom: 20px;
